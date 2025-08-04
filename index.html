@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queen Anne Cafe</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <!-- <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> -->
+<script src="assets/js/gsap.min.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/ScrollSmoother.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="smooth-wrapper">
+    <div class="smooth-content">
+  <!-- Navbar -->
+  <header>
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="hamburger" id="hamburger">
+          &#9776; <!-- hamburger icon -->
+        </div>
+        <ul class="nav-links" id="nav-links">
+          <li><a href="#story">Our Story</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#menu">What We Serve</a></li>
+          <li><a href="#contact">Connect with Us</a></li>
+        </ul>
+      </div>
+    </nav>    
+  </header>
+
+  <!-- Hero -->
+  <section class="hero" data-aos="fade-up">
+    <div class="hero-content">
+      <img src="./assets/images/new logo.png" alt="Queen Anne Logo" class="hero-logo" />
+    </div>
+  </section>
+
+  <!-- Our Story -->
+  <section id="story" class="section story-section" data-aos="fade-up">
+    <div class="story-container">
+      <div class="story-title">
+        <div class="text-reveal-wrapper">
+          <div class="reveal-line">
+            <span class="word">Our</span>
+            <span class="word">Story</span>
+          </div>
+        </div>
+      </div>
+      <div class="story-text" id="para">
+        <p> In the heart of Riyadh, Queen Anne was born from the city itself bold, elegant, and full of contrast.
+        Inspired by the spirit of the Queen Anne style—a little classic, a little dramatic, always full of detail—we imagined a space that brings people together. Not just for coffee, but for the feeling of being seen, connected, and a little inspired.<br>
+        Our café is made for those who notice the little things—the curve of a chair, the color of light at 4PM, the scent of a warm pastry with good coffee. We don’t believe in rushing. We believe in mood. In beauty. In stories shared over slow drinks.
+        We are not minimal. We are meaningful.<br>
+        Welcome to Queen Anne. Your place in the city.</p>
+      </div>
+      <div class="story-image">
+        <img src="assets/images/banner image - 2.jpg" alt="Queen Anne Cafe Interior"  />
+      </div>
+    </div>
+  </section>
+  
+  
+  
+
+  <!-- Gallery -->
+  <section id="gallery" class="section" data-aos="fade-up">
+    <h2>Gallery</h2>
+    <div class="gallery">
+      <img src="assets/images/gallery1.jpg" alt="Gallery Image 1">
+      <img src="assets/images/gallery2.jpg" alt="Gallery Image 2">
+      <img src="assets/images/gallery3.jpg" alt="Gallery Image 3">
+    </div>
+  </section>
+
+  <!-- Menu -->
+  <section id="menu" class="section" data-aos="fade-up">
+    <h2>What We Serve</h2>
+    <ul class="menu-items">
+      <li>Iced Caramel Macchiato - 20.00</li>
+      <li>Zaatar & Labneh Sandwich - 23.00</li>
+      <li>Rose Cardamom Latte - 19.00</li>
+      <li>Cheese Cake - 15.00</li>
+      <li>Espresso tonic - 10.00</li>
+      <li>Lavender lemonade - 23.00</li>
+      <li>Saffron milk cake - 30.00</li>
+      <li>Croissant Pistachio - 12.00</li>
+      <li>Cold brew - 9.00</li>
+    </ul>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact-section" data-aos="fade-up">
+    <h2>Connect with Us</h2>
+    <form action="https://formspree.io/f/your-id" method="POST">
+      <input type="text" name="name" placeholder="Name" required>
+      <input type="email" name="email" placeholder="Email" required>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send</button>
+    </form>
+  </section>
+
+  <!-- Footer -->
+  <footer data-aos="fade-up">
+    <p><strong>Opening Hours:</strong> Sun – Thu: 8 AM – 11 PM<br>
+      Fri – Sat: 9 AM – Midnight</p>
+    <p><strong>Address:</strong> Faisal Al-Saud Street, Villa 27<br>Al-Nakheel District, Riyadh 12345, Kingdom of Saudi Arabia</p>
+    <p><strong>Call Us:</strong> +966 945864545767</p>
+    <p>Thank you for being part of the story. See you soon, at Queen Anne.</p>
+  </footer>
+  <script src="assets/js/script.js"></script>
+</div>
+</div>
+</body>
+</html>
