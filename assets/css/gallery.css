@@ -1,0 +1,214 @@
+/* ========== Fonts ========== */
+@font-face {
+  font-family: "Melodrame";
+  src: url("../fonts/relationship-of-melodrame.ttf") format("truetype");
+}
+@font-face {
+  font-family: "Tomato Medium Slanted";
+  src: url("../fonts/TOMATO_GROTESK/TomatoGrotesk-MediumSlanted.otf") format("truetype");
+}
+
+/* ========== Base Reset ========== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: sans-serif;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+}
+
+/* ========== Layout ========== */
+.container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100vh;
+}
+
+/* ========== Main Preview ========== */
+.main-preview {
+  position: relative;
+  flex: 0 0 45%;
+  padding: 0rem 0.5rem 0.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.preview-inner {
+  position: relative;
+  width: 100%;
+  height: calc(100% - 8rem);
+  overflow: hidden;
+}
+.preview-inner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  transition: opacity 0.5s ease-in-out;
+  opacity: 1;
+}
+.preview-inner img.fade-out {
+  opacity: 0;
+}
+#bigImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* ========== Title + Index ========== */
+.preview-header {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  /* height: 8rem; */
+  z-index: 10;
+}
+.preview-title {
+  font-size: clamp(2.5rem, 5vw, 6rem);
+  color: #000;
+  font-family: "Melodrame", sans-serif;
+  font-weight: normal;
+}
+.preview-index {
+  font-size: clamp(1rem, 1.5vw, 1.25rem);
+  color: #333;
+  font-family: "Tomato Medium Slanted", sans-serif;
+  padding: 1rem 0;
+}
+
+/* ========== Thumbnail Strip ========== */
+.minimap-wrapper {
+  flex: 0 0 55%;
+  padding: 1rem 1rem 0.25rem 0rem;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  overflow: hidden;
+}
+.minimap {
+  display: flex;
+  gap: 0.2rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scroll-behavior: smooth;
+  max-width: 100%;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+.minimap::-webkit-scrollbar {
+  display: none;
+}
+.thumbnail-button {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+}
+.thumbnail-button.active,
+.thumbnail-button:hover {
+  border-color: #000000;
+}
+.thumbnail-button img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+/* ========== Responsive: Tablet (768px - 1023px) ========== */
+@media (min-width: 768px) and (max-width: 1023px) {
+  .container {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .main-preview {
+    padding: 0;
+    flex: 1;
+    justify-content: flex-start;
+  }
+
+  .preview-header {
+    height: 8rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem 0 0 0;
+  }
+
+  .preview-inner {
+    flex: 1;
+    width: 100%;
+  }
+
+  .thumbnail-button img {
+    width: 120px;
+    height: 120px;
+  }
+
+  .minimap-wrapper {
+    padding: 1rem 0;
+  }
+}
+
+/* ========== Responsive: Desktop (1024px and up) ========== */
+@media (min-width: 1024px) {
+  .thumbnail-button img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* ========== Responsive: Mobile (max-width: 767px) ========== */
+@media (max-width: 767px) {
+  .container {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .main-preview {
+    padding: 0;
+    flex: 1;
+    justify-content: flex-start;
+  }
+  .minimap {
+    justify-content: flex-start;
+  }
+
+  .thumbnail-button img {
+    width: 120px;
+    height: 120px;
+  }
+  .preview-header {
+    height: 8rem;
+    justify-content: space-between;
+    align-items: flex-end;
+    padding: 1rem 0 0 0;
+  }
+
+  /* No override for preview-title or preview-index */
+  /* They inherit desktop styles for consistency */
+
+  .preview-inner {
+    flex: 1;
+    width: 100%;
+  }
+
+  .thumbnail-button img {
+    width: 100px;
+    height: 100px;
+  }
+
+  .minimap-wrapper {
+    padding: 1rem 0;
+  }
+}
+

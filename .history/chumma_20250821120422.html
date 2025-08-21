@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Fetch Example</title>
+</head>
+<body>
+  <h1>Fetch API Example</h1>
+  <button id="getData">Get Data</button>
+  <pre id="output"></pre>
+
+  <script>
+    document.getElementById("getData").addEventListener("click", () => {
+      fetch("http://localhost:1337/api/galleries?populate=") // Example API
+        .then(response => response.json()) // Convert response to JSON
+        .then(data => {
+          document.getElementById("output").textContent = JSON.stringify(data, null, 2);
+        })
+        .catch(error => {
+          console.error("Error:", error);
+        });
+    });
+  </script>
+</body>
+</html>

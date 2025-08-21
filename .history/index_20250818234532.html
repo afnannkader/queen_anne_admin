@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Queen Anne Cafe</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+  <script src="assets/js/gsap.min.js"></script>
+  <script src="assets/js/ScrollTrigger.min.js"></script>
+  <script src="assets/js/ScrollSmoother.min.js"></script>
+  <script src="assets/js/SplitText.min.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="smooth-wrapper">
+    <div class="smooth-content">
+      <!-- Navbar -->
+      <header>
+        <nav class="navbar">
+          <div class="nav-container">
+            <div class="hamburger" id="hamburger">
+              &#9776; <!-- hamburger icon -->
+            </div>
+            <ul class="nav-links" id="nav-links">
+              <li><a href="#">{ Home }</a></li>
+              <li><a href="#story">{ Our Story }</a></li>
+              <li><a href="#gallery">{ Gallery }</a></li>
+              <li><a href="#menu">{ What We Serve }</a></li>
+              <li><a href="#contact">{ Connect with Us }</a></li>
+
+            </ul>
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero -->
+      <!-- Hero -->
+      <section class="hero" data-aos="fade-up">
+        <div class="hero-bg">
+          <div class="hero-bg-left"></div>
+          <div class="hero-bg-right"></div>
+        </div>
+
+        <div class="hero-content">
+          <img src="./assets/images/logo/BGAsset 22.svg" alt="Queen Anne Logo" class="hero-logo" />
+        </div>
+      </section>
+
+
+
+      <!-- Our Story -->
+      <section id="story" class="section story-section">
+        <div class="story-grid">
+          <!-- Top-left: Title -->
+
+          <div class="story-title">
+            <span class="reveal-text">Our Story</span>
+
+          </div>
+
+          <!-- Top-right: Paragraphs -->
+          <div class="story-block text-block">
+            <div class="story-text" id="para">
+              <p class="Regular">In the heart of Riyadh, Queen Anne was born from the city itself—bold, elegant, and
+                full of contrast. Inspired by the spirit of the Queen Anne style—a little classic, a little dramatic,
+                always full of detail—we imagined a space that brings people together. Not just for coffee, but for the
+                feeling of being seen, connected, and a little inspired.</p><br>
+              <p class="Regular">Our café is made for those who notice the little things—the curve of a chair, the color
+                of light at 4PM, the scent of a warm pastry with good coffee. We don’t believe in rushing. We believe in
+                mood. In beauty. In stories shared over slow drinks. We are not minimal. We are meaningful.</p><br>
+              <p class="Regular">Welcome to Queen Anne. Your place in the city.</p>
+            </div>
+          </div>
+
+          <!-- Bottom-left: Image -->
+          <div class="story-block image-block">
+            <div class="story-image">
+              <img src="assets/images/hero-image/008.jpg" alt="Queen Anne Cafe Interior" />
+            </div>
+          </div>
+
+          <!-- Bottom-right: White space -->
+          <div class="story-block empty-block">
+            <!-- Intentionally empty for contrast -->
+          </div>
+        </div>
+      </section>
+
+
+
+
+
+      <!-- Gallery -->
+      <section id="gallery" class="section gallery-section">
+        <div class="story-title">
+          <span class="reveal-text">Gallery</span>
+        </div>
+        <div class="gallery-wrapper">
+          <div class="gallery-track">
+            <img src="assets/images/arabs drinking cofe.jpg" alt="Gallery Image 1" />
+            <img src="assets/images/cafe ambience.jpg" alt="Gallery Image 2" />
+            <img src="assets/images/cafe exterior.jpg" alt="Gallery Image 3" />
+            <img src="assets/images/cofee making.jpg" alt="Gallery Image 3" />
+            <img src="assets/images/crossent setting.jpg" alt="Gallery Image 3" />
+            <img src="assets/images/customer having cofee.jpg" alt="Gallery Image 3" />
+            <img src="assets/images/person in cafe.jpg" alt="Gallery Image 3" />
+            <img src="assets/images/package.jpg" alt="Gallery Image 3" />
+          </div>
+        </div>
+        <div class="view-more">
+          <a href="gallery.html">
+            View More
+            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+              viewBox="0 0 24 24">
+              <path d="M5 12h14"></path>
+              <path d="M13 6l6 6-6 6"></path>
+            </svg>
+          </a>
+        </div>
+
+      </section>
+
+
+      <section id="menu" class="section menu">
+        <h2 class="section__title reveal-text">What We Serve</h2>
+
+        <div class="menu__grid" id="menuGrid">
+          <!-- First 6 Visible Items -->
+          <div class="menu__item">
+            <div class="menu__item-image">
+              <img
+                src="assets/images/cappicino.jpg"
+                alt="A cup of Iced Caramel Macchiato"
+              />
+            </div>
+            <div class="menu__item-text">
+              <span>Iced Caramel Macchiato</span>
+              <span class="menu__item-price">﷼ 20.00</span>
+            </div>
+          </div>
+
+          <div class="menu__item">
+            <div class="menu__item-image">
+              <img
+                src="assets/images/blue 
+
+
+      </section>
+  <section id="contact" class="contact-grid">
+    <!-- Top Left: Heading + Info (split into 2 columns) -->
+    <div class="left-column">
+      <div class="heading-block">
+        <div class="contact-title">
+          <span class="reveal-text">Connect With Us</span>
+        </div>
+      </div>
+
+      <div class="info-block">
+        <div class="info-columns">
+          <!-- Column 1 -->
+          <div class="info-col">
+            <div class="contact-section">
+              <h4>General Enquiries</h4>
+              <p>
+                queenanneroastery@gmail.com<br />
+                +966 9983469234545<br />
+                Instagram
+              </p>
+            </div>
+
+            <div class="contact-section">
+              <h4>Address</h4>
+              <p>
+                Faisal Al–Saud Street, Villa 27<br />
+                Al–Nakheel District, Riyadh 12345<br />
+                Kingdom of Saudi Arabia
+              </p>
+            </div>
+          </div>
+
+          <!-- Column 2 -->
+          <div class="info-col">
+        
+
+            <div class="contact-section">
+              <h4>Opening Hours</h4>
+              <p>
+                Sun – Thu: 8 AM – 11 PM<br />
+                Fri – Sat: 9 AM – Midnight
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Top Right: Empty Block -->
+    <div class="right-empty"></div>
+
+    <!-- Bottom: Full-Width Map -->
+    <div class="map-block">
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.4840558890955!2d46.6086045!3d24.8131147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee59bb08d0b43%3A0x5ccfbcb3603672ed!2sQueen%20Anne%20Roastery!5e0!3m2!1sen!2snl!4v1754321330575!5m2!1sen!2snl"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+  </section>
+      <script src="assets/js/script.js"></script>
+    </div>
+  </div>
+</body>
+
+</html>

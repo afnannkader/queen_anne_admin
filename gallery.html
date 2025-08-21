@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Image Gallery Preview</title>
+
+    <link rel="stylesheet" href="./assets/css/gallery.css" />
+
+    <!-- Optional: Defer if not critical -->
+    <script src="./assets/js/gsap.min.js" defer></script>
+    <script src="./assets/js/ScrollSmoother.min.js" defer></script>
+    <script src="./assets/js/gallery.js" defer></script>
+  </head>
+  <body>
+    <main role="main" class="container">
+      <section class="main-preview">
+        <div class="preview-header">
+          <h1 class="preview-title">Gallery</h1>
+          <p id="previewIndex" class="preview-index">001</p>
+        </div>
+
+        <div class="preview-inner" aria-live="polite">
+          <img id="bigImage" alt="" />
+        </div>
+      </section>
+
+      <aside class="minimap-wrapper">
+        <ul id="minimap" class="minimap" role="list"></ul>
+      </aside>
+    </main>
+  </body>
+</html>
