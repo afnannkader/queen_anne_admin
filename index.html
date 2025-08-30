@@ -21,21 +21,20 @@
         <nav class="navbar">
           <div class="nav-container">
             <div class="hamburger" id="hamburger">
-              &#9776; <!-- hamburger icon -->
+              { Menu }
             </div>
+            <!-- Overlay Menu -->
             <ul class="nav-links" id="nav-links">
               <li><a href="#">{ Home }</a></li>
               <li><a href="#story">{ Our Story }</a></li>
               <li><a href="#gallery">{ Gallery }</a></li>
               <li><a href="#menu">{ What We Serve }</a></li>
               <li><a href="#contact">{ Connect with Us }</a></li>
-
             </ul>
           </div>
         </nav>
       </header>
 
-      <!-- Hero -->
       <!-- Hero -->
       <section class="hero" data-aos="fade-up">
         <div class="hero-bg">
@@ -48,6 +47,17 @@
         </div>
       </section>
 
+      <!-- Intro Section -->
+      <section id="intro" class="section intro-section">
+        <div class="intro-text">
+          <h2>
+            Good coffee, soft corners
+            <img id="introImage" alt="Cafe interior" class="inline-image" /><br>
+            Experience a sense of quality that slows everything down.
+          </h2>
+        </div>
+      </section>
+
 
 
       <!-- Our Story -->
@@ -56,8 +66,7 @@
           <!-- Top-left: Title -->
 
           <div class="story-title">
-            <span class="reveal-text">Our Story</span>
-
+            <span class="reveal-text">Heritage</span>
           </div>
 
           <!-- Top-right: Paragraphs -->
@@ -77,201 +86,107 @@
           <!-- Bottom-left: Image -->
           <div class="story-block image-block">
             <div class="story-image">
-              <img src="assets/images/hero-image/008.jpg" alt="Queen Anne Cafe Interior" />
+              <img id="OurStoryImage" alt="Queen Anne Cafe Interior" />
             </div>
           </div>
 
-          <!-- Bottom-right: White space -->
-          <div class="story-block empty-block">
-            <!-- Intentionally empty for contrast -->
-          </div>
+
         </div>
       </section>
-
-
-
-
 
       <!-- Gallery -->
-      <section id="gallery" class="section gallery-section">
-        <div class="story-title">
-          <span class="reveal-text">Gallery</span>
-        </div>
-        <div class="gallery-wrapper">
-          <div class="gallery-track">
-            <img src="assets/images/arabs drinking cofe.jpg" alt="Gallery Image 1" />
-            <img src="assets/images/cafe ambience.jpg" alt="Gallery Image 2" />
-            <img src="assets/images/cafe exterior.jpg" alt="Gallery Image 3" />
-            <img src="assets/images/cofee making.jpg" alt="Gallery Image 3" />
-            <img src="assets/images/crossent setting.jpg" alt="Gallery Image 3" />
-            <img src="assets/images/customer having cofee.jpg" alt="Gallery Image 3" />
-            <img src="assets/images/person in cafe.jpg" alt="Gallery Image 3" />
-            <img src="assets/images/package.jpg" alt="Gallery Image 3" />
-          </div>
-        </div>
-        <div class="view-more">
-          <a href="gallery.html">
-            View More
-            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
-              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-              viewBox="0 0 24 24">
-              <path d="M5 12h14"></path>
-              <path d="M13 6l6 6-6 6"></path>
-            </svg>
-          </a>
-        </div>
+<section id="gallery" class="section gallery-section">
+  <div class="story-title">
+    <span class="reveal-text gallery-title">Gallery</span>
+  </div>
+  <div class="gallery-wrapper">
+    <div class="gallery-track" id="galleryTrack"></div>
+  </div>
+  <div class="view-more">
+    <a href="gallery.html">
+      View More
+      <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
+        stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
+        viewBox="0 0 24 24">
+        <path d="M5 12h14"></path>
+        <path d="M13 6l6 6-6 6"></path>
+      </svg>
+    </a>
+  </div>
+</section>
 
-      </section>
+
       <!-- Menu -->
-      <section id="menu" class="section" data-aos="fade-up">
-        <div class="story-title">
-          <span class="reveal-text ">What we serve</span>
-        </div>
-        <div class="menu-grid">
-          <div class="menu-item">
-            <!-- <img src="assets/images/menu/iced-caramel.jpg" alt="Iced Caramel Macchiato" /> -->
-            <img src="assets/images/cappicino.jpg" alt="Iced Caramel Macchiato" />
-            <div class="menu-text">
-              <span>Iced Caramel Macchiato</span>
-              <span class="price">﷼ 20.00</span>
-            </div>
-          </div>
-          <div class="menu-item">
-            <!-- <img src="assets/images/menu/lavender-lemonade.jpg" alt="Lavender Lemonade" /> -->
-            <img src="assets/images/blue drink.jpg" alt="Lavender Lemonade" />
-            <div class="menu-text">
-              <span>Lavender lemonade</span>
-              <span class="price">﷼ 23.00</span>
-            </div>
-          </div>
-          <div class="menu-item">
-            <!-- <img src="assets/images/menu/espresso-tonic.jpg" alt="Espresso tonic" /> -->
-            <img src="assets/images/cola.jpg" alt="Espresso tonic" />
-            <div class="menu-text">
-              <span>Espresso tonic</span>
-              <span class="price">﷼ 10.00</span>
-            </div>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/bread with strawberry.jpg" alt="Iced Caramel Macchiato" />
-            <div class="menu-text">
-              <span>Iced Caramel Macchiato</span>
-              <span class="price">﷼ 20.00</span>
-            </div>
-          </div>
-        </div>
+<section id="menu" class="section" data-aos="fade-up">
+  <div class="story-title">
+    <span class="reveal-text menu-title">What we serve</span>
+  </div>
 
-        <!-- Hidden items shown on click -->
-        <div class="menu-grid hidden" id="more-menu-items">
-          <div class="menu-item">
-            <img src="assets/images/cola.jpg" alt="Extra Item 1" />
-            <div class="menu-text">
-              <span>Rose Cardamom Latte</span>
-              <span class="price">﷼ 19.00</span>
-            </div>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/crossant.jpg" alt="Lavender Lemonade" />
-            <div class="menu-text">
-              <span>Lavender lemonade</span>
-              <span class="price">﷼ 23.00</span>
-            </div>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/cake slice.png" alt="Extra Item 2" />
-            <div class="menu-text">
-              <span>Cold Brew</span>
-              <span class="price">﷼ 9.00</span>
-            </div>
-          </div>
-          <div class="menu-item">
-            <img src="assets/images/WhatsApp Image 2025-08-04 at 18.40.30_50e2bd4c.jpg" alt="Espresso tonic" />
-            <div class="menu-text">
-              <span>Espresso tonic</span>
-              <span class="price">﷼ 10.00</span>
-            </div>
-          </div>
-          <!-- Add more hidden items as needed -->
-        </div>
+  <div class="menu-grid" id="menuGrid"></div>
 
-        <!-- View More Button -->
-        <div class="view-more">
-          <a href="#" id="viewMoreBtn">
-            View More
-            <svg class="arrow" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"
-              stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"
-              viewBox="0 0 24 24">
-              <path d="M5 12h14"></path>
-              <path d="M13 6l6 6-6 6"></path>
-            </svg>
-          </a>
-        </div>
-
-      </section>
+  <!-- View More Button -->
+  <div class="view-more">
+    <a href="#" id="viewMoreBtn">View More</a>
+  </div>
+</section>
 
 
       </section>
-  <section id="contact" class="contact-grid">
-    <!-- Top Left: Heading + Info (split into 2 columns) -->
-    <div class="left-column">
-      <div class="heading-block">
-        <div class="contact-title">
-          <span class="reveal-text">Connect With Us</span>
-        </div>
-      </div>
-
-      <div class="info-block">
-        <div class="info-columns">
-          <!-- Column 1 -->
-          <div class="info-col">
-            <div class="contact-section">
-              <h4>General Enquiries</h4>
-              <p>
-                queenanneroastery@gmail.com<br />
-                +966 9983469234545<br />
-                Instagram
-              </p>
-            </div>
-
-            <div class="contact-section">
-              <h4>Address</h4>
-              <p>
-                Faisal Al–Saud Street, Villa 27<br />
-                Al–Nakheel District, Riyadh 12345<br />
-                Kingdom of Saudi Arabia
-              </p>
-            </div>
-          </div>
-
-          <!-- Column 2 -->
-          <div class="info-col">
-        
-
-            <div class="contact-section">
-              <h4>Opening Hours</h4>
-              <p>
-                Sun – Thu: 8 AM – 11 PM<br />
-                Fri – Sat: 9 AM – Midnight
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+  <section id="contact">
+  <!-- Top Grid: Title + Contact Form -->
+  <div class="top-grid">
+    <!-- Left Column -->
+    <div class="left-title">
+      <h2 class="contact-title">Connect With Us</h2>
     </div>
 
-    <!-- Top Right: Empty Block -->
-    <div class="right-empty"></div>
-
-    <!-- Bottom: Full-Width Map -->
-    <div class="map-block">
-      <iframe
-        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.4840558890955!2d46.6086045!3d24.8131147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee59bb08d0b43%3A0x5ccfbcb3603672ed!2sQueen%20Anne%20Roastery!5e0!3m2!1sen!2snl!4v1754321330575!5m2!1sen!2snl"
-        allowfullscreen=""
-        loading="lazy"
-        referrerpolicy="no-referrer-when-downgrade"
-      ></iframe>
+    <!-- Right Column (Form) -->
+    <div class="right-form">
+      <form class="contact-form" id="whatsappForm">
+        <input type="text" placeholder="Name" id="name" required />
+        <input type="email" placeholder="Email" id="email" required />
+        <textarea placeholder="Your Message" rows="4" id="message" required></textarea>
+        <button type="submit">SEND</button>
+      </form>
     </div>
-  </section>
+  </div>
+
+  <!-- Middle Info Section -->
+  <div class="info-row">
+    <div class="contact-section">
+      <h4>General Enquiries</h4>
+      <p>
+        queenanneroastery@gmail.com <br />
+        +966 55 110 1876 <br />
+        <a href="https://www.instagram.com/queenanne.sa/">Instagram</a>
+      </p>
+    </div>
+
+    <div class="contact-section">
+      <h4>Address</h4>
+      <p>Al Malqa, Riyadh 13524,<br />Saudi Arabia</p>
+      <button class="directions-btn">DIRECTIONS</button>
+    </div>
+
+    <div class="contact-section">
+      <h4>Opening Hours</h4>
+      <p>
+        Mon–Thu, Sun: 6am – 11:30pm <br />
+        Fri–Sat: 7am – 12am
+      </p>
+    </div>
+  </div>
+
+  <!-- Map Block -->
+  <div class="map-block">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3621.4840558890955!2d46.6086045!3d24.8131147!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e2ee59bb08d0b43%3A0x5ccfbcb3603672ed!2sQueen%20Anne%20Roastery!5e0!3m2!1sen!2snl!4v1754321330575!5m2!1sen!2snl"
+      allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+</section>
+
       <script src="assets/js/script.js"></script>
     </div>
   </div>

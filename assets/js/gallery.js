@@ -1,25 +1,11 @@
-const GALLERY_CONFIG = {
-  count: 12,
-  path: "./assets/images/",
-  prefix: "GALLERY",
-  ext: ".png",
-};
-
-const createImageList = ({ count, path, prefix, ext }) =>
-  Array.from({ length: count }, (_, i) => {
-    const index = String(i + 1).padStart(2, "0");
-    return {
-      src: `${path}${prefix}${index}${ext}`,
-      alt: `Gallery Image ${index}`,
-    };
-  });
-
 const Gallery = (() => {
-  const images = createImageList(GALLERY_CONFIG);
-
+  let images = [];
   let currentIndex = null;
   let minimap, bigImage, previewIndex;
   let hasAnimated = false;
+
+  const API_URL = "http://localhost:1337"; // 👈 change if deployed
+  const ENDPOINT = "/api/gallery-previews?populate=*";
 
   const isDesktop = () => window.matchMedia("(min-width: 1025px)").matches;
 
@@ -55,10 +41,10 @@ const Gallery = (() => {
         return;
       }
 
-      // Replace only after image is fully loaded
       bigImage.src = loadedImg.src;
       bigImage.alt = alt;
 
+      // ✅ Update index counter
       previewIndex.textContent = String(index + 1).padStart(3, "0");
 
       highlightActiveThumbnail(index);
@@ -119,21 +105,44 @@ const Gallery = (() => {
       }
     };
 
-    minimap.addEventListener("wheel", (e) => {
-      e.preventDefault();
-      scrollTarget += e.deltaY || e.deltaX;
-      scrollTarget = Math.max(
-        0,
-        Math.min(scrollTarget, minimap.scrollWidth - minimap.clientWidth)
-      );
-      if (!isScrolling) {
-        isScrolling = true;
-        requestAnimationFrame(smoothScrollStep);
-      }
-    }, { passive: false });
+    minimap.addEventListener(
+      "wheel",
+      (e) => {
+        e.preventDefault();
+        scrollTarget += e.deltaY || e.deltaX;
+        scrollTarget = Math.max(
+          0,
+          Math.min(scrollTarget, minimap.scrollWidth - minimap.clientWidth)
+        );
+        if (!isScrolling) {
+          isScrolling = true;
+          requestAnimationFrame(smoothScrollStep);
+        }
+      },
+      { passive: false }
+    );
   };
 
-  const init = () => {
+  // ✅ Fetch images from Strapi
+  const fetchImages = async () => {
+    try {
+      const res = await fetch(`${API_URL}${ENDPOINT}`);
+      const data = await res.json();
+      console.log("Fetched Strapi data:", data.data);
+
+      images = data.data.map((item, i) => {
+        const file = item.Image;
+        return {
+          src: file?.url ? `${API_URL}${file.url}` : "./assets/images/placeholder.png",
+          alt: file?.name || `Gallery Image ${i + 1}`,
+        };
+      });
+    } catch (err) {
+      console.error("Error fetching Strapi images:", err);
+    }
+  };
+
+  const init = async () => {
     minimap = document.getElementById("minimap");
     bigImage = document.getElementById("bigImage");
     previewIndex = document.getElementById("previewIndex");
@@ -143,12 +152,20 @@ const Gallery = (() => {
       return;
     }
 
+    // ✅ Load Strapi images first
+    await fetchImages();
+
+    if (images.length === 0) {
+      console.error("No images loaded from Strapi");
+      return;
+    }
+
     images.forEach((imgData, index) => {
       const thumbEl = createThumbnailButton(imgData, index);
       minimap.appendChild(thumbEl);
     });
-
-    preloadImage(images[0].src, (err, img) => {
+~
+    preloadImage(images[0].src, (err) => {
       if (!err) updateBigImage(0);
     });
 

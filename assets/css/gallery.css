@@ -7,7 +7,10 @@
   font-family: "Tomato Medium Slanted";
   src: url("../fonts/TOMATO_GROTESK/TomatoGrotesk-MediumSlanted.otf") format("truetype");
 }
-
+@font-face {
+  font-family: "Tomato light";
+  src: url("../fonts/TOMATO_GROTESK/TomatoGrotesk-Light.otf") format("truetype");
+}
 /* ========== Base Reset ========== */
 * {
   box-sizing: border-box;
@@ -19,6 +22,8 @@ body {
   height: 100vh;
   overflow: hidden;
   display: flex;
+  background-color: #2A2324;
+
 }
 
 /* ========== Layout ========== */
@@ -74,13 +79,13 @@ body {
 }
 .preview-title {
   font-size: clamp(2.5rem, 5vw, 6rem);
-  color: #000;
+  color: #F9FDFF;
   font-family: "Melodrame", sans-serif;
   font-weight: normal;
 }
 .preview-index {
   font-size: clamp(1rem, 1.5vw, 1.25rem);
-  color: #333;
+  color: #F9FDFF;
   font-family: "Tomato Medium Slanted", sans-serif;
   padding: 1rem 0;
 }
@@ -123,6 +128,28 @@ body {
   height: 100px;
   object-fit: cover;
 }
+
+.back-button {
+  position: absolute;
+  top: 1rem;
+  left: 2rem;
+  background: transparent;
+  border: none;
+  font-size: 1.2rem;
+  font-family: "Tomato light", sans-serif; /* your existing font */
+  color: #F9FDFF;
+  cursor: pointer;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  transition: color 0.3s ease;
+}
+
+.back-button:hover {
+  color: #000;
+}
+
 
 /* ========== Responsive: Tablet (768px - 1023px) ========== */
 @media (min-width: 768px) and (max-width: 1023px) {
