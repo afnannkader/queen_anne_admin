@@ -6,12 +6,11 @@ module.exports = ({ env }) => {
   const connections = {
     mysql: {
       connection: {
-        host: env('DATABASE_HOST', 'localhost'),
-        port: env.int('DATABASE_PORT', 3306),
-        database: env('DATABASE_NAME', 'strapi'),
-        user: env('DATABASE_USERNAME', 'strapi'),
-        password: env('DATABASE_PASSWORD', 'strapi'),
-        ssl: env.bool('DATABASE_SSL', false) && {
+     host: env('DATABASE_HOST', 'ballast.proxy.rlwy.net'), // Railway TCP proxy host
+      port: env.int('DATABASE_PORT', 23743),                // Railway TCP proxy port
+      database: env('DATABASE_NAME', 'railway'),           // Database name
+      user: env('DATABASE_USERNAME', 'root'),              // Username
+      password: env('DATABASE_PASSWORD', 'PNVeTcjicqTjFqEwoaGLsWSEWRalXaVU'),         ssl: env.bool('DATABASE_SSL', false) && {
           key: env('DATABASE_SSL_KEY', undefined),
           cert: env('DATABASE_SSL_CERT', undefined),
           ca: env('DATABASE_SSL_CA', undefined),
