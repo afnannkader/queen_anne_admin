@@ -4,23 +4,17 @@ module.exports = ({ env }) => {
   const client = env('DATABASE_CLIENT', 'sqlite');
 
   const connections = {
-    mysql: {
-      connection: {
-     host: env('DATABASE_HOST', 'ballast.proxy.rlwy.net'), // Railway TCP proxy host
-      port: env.int('DATABASE_PORT', 23743),                // Railway TCP proxy port
-      database: env('DATABASE_NAME', 'railway'),           // Database name
-      user: env('DATABASE_USERNAME', 'root'),              // Username
-      password: env('DATABASE_PASSWORD', 'PNVeTcjicqTjFqEwoaGLsWSEWRalXaVU'),         ssl: env.bool('DATABASE_SSL', false) && {
-          key: env('DATABASE_SSL_KEY', undefined),
-          cert: env('DATABASE_SSL_CERT', undefined),
-          ca: env('DATABASE_SSL_CA', undefined),
-          capath: env('DATABASE_SSL_CAPATH', undefined),
-          cipher: env('DATABASE_SSL_CIPHER', undefined),
-          rejectUnauthorized: env.bool('DATABASE_SSL_REJECT_UNAUTHORIZED', true),
-        },
-      },
-      pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
+  mysql: {
+    connection: {
+      host: env('DATABASE_HOST', 'ballast.proxy.rlwy.net'),
+      port: env.int('DATABASE_PORT', 23743),
+      database: env('DATABASE_NAME', 'railway'),
+      user: env('DATABASE_USERNAME', 'root'),
+      password: env('DATABASE_PASSWORD', 'PNVeTcjicqTjFqEwoaGLsWSEWRalXaVU'),
+      ssl: false,
     },
+    pool: { min: env.int('DATABASE_POOL_MIN', 2), max: env.int('DATABASE_POOL_MAX', 10) },
+  },
     postgres: {
       connection: {
         connectionString: env('DATABASE_URL'),
